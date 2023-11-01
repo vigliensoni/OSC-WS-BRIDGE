@@ -12,11 +12,11 @@ Open your terminal window on Mac (press CMD + spacebar simultaneously, in the se
 
 Install package dependencies (the files you will need to run the code) by typing in:
 
-```$ npm install```
+```$ npm install osc-js```
 
 Mac users - If you get a permission error, try using `sudo` instead and when terminal asks for a password, enter your administrator password:
 
-```$ sudo npm install```
+```$ sudo npm install osc-js```
 
 Then, run bridge.js to start the OSC bridge by typing:
 
