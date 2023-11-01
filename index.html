@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
-<body>
-    <p>An OSC message is sent by default to port 9129</p>
-
-
-    <button id="send">Send Message</button>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/adzialocha/osc-js/lib/osc.min.js"></script>
-    <script type="text/javascript">
-        const osc = new OSC();
-        const config = { host: 'localhost', port: 8080 };
-        osc.open(config); // connect by default to ws://localhost:8080
-        document.getElementById('send').addEventListener('click', function() {
-            let message = new OSC.Message('/test/random-numbers', Math.random(), Math.random());
-            osc.send(message);
-            });
-    </script>
-</body>
+    <head>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/adzialocha/osc-js/lib/osc.min.js"></script>
+    </head>
+    <body>
+        <p>An OSC message is sent by default to port 9129</p>
+        <button id="send">Send Message</button>
+        <script type="text/javascript">
+            const osc = new OSC();
+            const config = { host: 'localhost', port: 8080 };
+            osc.open(config); // connect by default to ws://localhost:8080
+            document.getElementById('send').addEventListener('click', function() {
+                let message = new OSC.Message('/test/random-numbers', Math.random(), Math.random());
+                console.log(message);
+                osc.send(message);
+                });
+        </script>
+    </body>
 </html> 
